@@ -13,8 +13,13 @@ def test_unknown_review():
     assert classify_review("It arrived on Tuesday") == "unknown"
 
 
+def test_negative_review():
+    assert classify_review("Bad quality, broke after a day") == "negative"
+
+
 if __name__ == "__main__":
     test_uppercase_text()
     test_leading_trailing_spaces()
     test_unknown_review()
+    test_negative_review()
     print("All tests passed")
